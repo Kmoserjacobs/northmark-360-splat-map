@@ -2,9 +2,9 @@
   "status": "approximate GPS registration; not recovered camera poses",
   "source": "Insta360 X5 INSV GPS matched to video UTC creation time",
   "transform": {
-    "east": -25.4175,
-    "north": 27.9274,
-    "scale": 0.78,
+    "east": -26.2009,
+    "north": 29.4139,
+    "scale": 0.6729,
     "heading_deg": 171,
     "height_model_units": 1.2,
     "stretchX": 1,
@@ -32,7 +32,7 @@
   "placement_check": "Approximate visual registration using generator-row order, the yellow pipe bank around 200\u2013240 seconds, and the cross-yard traversal around 280 seconds. Automatic feature matching did not yield reliable camera poses. No quantified spatial accuracy.",
   "runtime": "518 timed positions; live camera projection; streamed hosted LOD SOG, 2 million splat budget on desktop and 1 million on narrow screens. Raw PLY is not loaded.",
   "adjustments": "Saved edits apply only to this defaults revision. Older prototype settings are ignored so the screenshot becomes the starting alignment. The box is active only while the alignment tool is open. Reset restores the screenshot transform and locked proportions.",
-  "defaults_revision": "2026-10-19-screenshot-v1",
+  "defaults_revision": "2026-10-19-screenshot-v2",
   "lock_proportions": true,
-  "default_source": "User-provided alignment screenshot, October 19, 2026"
+  "default_source": "User-provided revised alignment screenshot, October 19, 2026"
 }

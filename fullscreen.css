@@ -1,0 +1,63 @@
+/* Keep the same two panels alive while either becomes the main view. */
+.layout.views-expanded {
+ position:fixed;inset:0;z-index:10000;width:100vw;height:100dvh;
+ max-width:none;max-height:none;display:block;margin:0;padding:0;
+ background:#091015;overflow:hidden;
+ --inset-width:clamp(260px,29vw,420px);
+}
+.views-expanded>.right {display:contents}
+.views-expanded .panel {display:flex;flex-direction:column;min-width:0;min-height:0}
+.views-expanded .panel-head {flex-shrink:0}
+.views-expanded .view-primary {position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;z-index:0}
+.views-expanded .view-primary .model-stage,
+.views-expanded .view-primary .video-stage {flex:1;height:auto;min-height:0;aspect-ratio:auto}
+.views-expanded .view-primary .video-controls {padding:12px 18px}
+.views-expanded .view-primary .video-source-footer {margin:0 18px 10px}
+.views-expanded .view-primary .video-source-footer .status {margin:0}
+.views-expanded .view-inset {
+ position:absolute;right:max(18px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom));
+ width:var(--inset-width);z-index:2;border:1px solid #6e8b9d;border-radius:10px;
+ box-shadow:0 8px 32px #0009;background:#12202a;
+}
+.views-expanded .view-inset .panel-head {padding:6px 8px;gap:6px;flex-wrap:nowrap}
+.views-expanded .view-inset h2 {font-size:12px;margin-right:auto;white-space:nowrap}
+.views-expanded .view-inset .panel-head button {font-size:11px;padding:4px 6px;min-height:27px}
+.views-expanded .video-panel.view-inset .video-stage {flex:1;min-height:0;aspect-ratio:16/9}
+.views-expanded .video-panel.view-inset .video-controls {padding:6px 8px;gap:6px;flex-shrink:0}
+.views-expanded .video-panel.view-inset .play {width:29px;height:28px;padding:6px}
+.views-expanded .video-panel.view-inset output {font-size:10px}
+.views-expanded .video-panel.view-inset select {font-size:10px;max-width:90px;padding:4px}
+.views-expanded .video-panel.view-inset .video-source-footer,
+.views-expanded .video-panel.view-inset .video-hint,
+.views-expanded .video-panel.view-inset #rate {display:none}
+.views-expanded .model-panel.view-inset {bottom:max(112px,calc(env(safe-area-inset-bottom) + 96px));height:min(34vh,320px)}
+.views-expanded .model-panel.view-inset .model-stage {height:auto;min-height:0;flex:1}
+.views-expanded .model-panel.view-inset .model-footer,
+.views-expanded .model-panel.view-inset #modelToggle,
+.views-expanded .model-panel.view-inset #alignTool,
+.views-expanded .model-panel.view-inset #overview {display:none}
+.views-expanded .model-panel.view-inset .tools {order:initial;width:auto;margin-left:auto;gap:4px}
+.views-expanded .legend,.views-expanded .note {display:none}
+.views-expanded #alignment:not([open]) {display:none}
+.views-expanded #alignment[open] {
+ position:absolute;left:16px;top:65px;z-index:3;width:min(380px,calc(100vw - 32px));
+ max-height:calc(100dvh - 130px);overflow:auto;background:#101a23f5;box-shadow:0 5px 24px #0007;
+}
+@media(max-width:660px) {
+ .layout.views-expanded {--inset-width:min(58vw,270px)}
+ .views-expanded .view-inset {right:10px;bottom:14px}
+ .views-expanded .view-inset h2 {font-size:10px}
+ .views-expanded .view-inset .panel-head {padding:4px 6px;gap:4px}
+ .views-expanded .video-panel.view-inset select {max-width:77px;font-size:9px;padding:3px}
+ .views-expanded .video-panel.view-inset h2 {position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden}
+ .views-expanded .video-panel.view-inset .video-controls {padding:4px;gap:4px}
+ .views-expanded .video-panel.view-inset output {font-size:9px}
+ .views-expanded .model-panel.view-inset {height:25vh;min-height:145px;bottom:108px}
+ .views-expanded .model-panel.view-inset #lineToggle {display:none}
+ .views-expanded .view-primary .video-controls {padding:10px}
+ .views-expanded #alignment[open] {top:100px;max-height:calc(100dvh - 120px)}
+}
+@media(max-height:520px) and (min-width:661px) {
+ .layout.views-expanded {--inset-width:230px}
+ .views-expanded .model-panel.view-inset {height:38vh;min-height:120px;bottom:92px}
+}

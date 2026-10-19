@@ -14,6 +14,14 @@ Switching quality preserves video time, look direction, and play/pause state.
 8K playback requires a compatible browser/device; unsupported playback falls back
 to the fast preview, and the original file remains available through its link.
 
+## Fullscreen views
+
+Use the fullscreen icon on either view. The other remains interactive in a
+lower-right inset: orbit/click the splat or look around/play/seek the 360 video.
+The inset fullscreen icon swaps the main view. Exit with the main view icon or
+Escape. Both views stay loaded, preserving alignment, video time, camera
+position, and playback. Unsupported native fullscreen uses an in-page expansion.
+
 ## Alignment
 
 **Align** opens the editing box. Drag inside to move, corners to resize, or the
@@ -21,8 +29,8 @@ round handle to rotate. **Lock proportions** preserves the current aspect ratio;
 unlock it for independent width/depth scaling. Close the tool to hide/deactivate
 the box and restore orbit and click-to-seek. Adjustments save in the browser.
 
-The defaults are the user's checked settings: Across −25.4175, Along 27.9274,
-Scale 0.78, Heading 171°, Height 1.2, with proportions locked. Older prototype
+The defaults are the user's checked settings: Across −26.2009, Along 29.4139,
+Scale 0.6729, Heading 171°, Height 1.2, with proportions locked. Older prototype
 saves are ignored when this defaults revision first loads. Later edits persist
 within this revision. Reset restores these values and locks proportions. The line remains
 an estimated registration of outdoor GPS, not recovered reconstruction poses.
