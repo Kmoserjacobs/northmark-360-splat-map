@@ -22,7 +22,9 @@ unlock it for independent width/depth scaling. Close the tool to hide/deactivate
 the box and restore orbit and click-to-seek. Adjustments save in the browser.
 
 The defaults are the user's checked settings: Across −25.4175, Along 27.9274,
-Scale 0.78, Heading 171°, Height 1.2. Reset restores these values. The line remains
+Scale 0.78, Heading 171°, Height 1.2, with proportions locked. Older prototype
+saves are ignored when this defaults revision first loads. Later edits persist
+within this revision. Reset restores these values and locks proportions. The line remains
 an estimated registration of outdoor GPS, not recovered reconstruction poses.
 
 ## Hosting and maintenance

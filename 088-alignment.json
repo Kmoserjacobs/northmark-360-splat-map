@@ -31,6 +31,8 @@
   "ground_source": "Dominant ground plane fitted offline to the hosted scene lowest LOD. The hosted scene is already levelled, unlike the supplied Brush PLY.",
   "placement_check": "Approximate visual registration using generator-row order, the yellow pipe bank around 200\u2013240 seconds, and the cross-yard traversal around 280 seconds. Automatic feature matching did not yield reliable camera poses. No quantified spatial accuracy.",
   "runtime": "518 timed positions; live camera projection; streamed hosted LOD SOG, 2 million splat budget on desktop and 1 million on narrow screens. Raw PLY is not loaded.",
-  "adjustments": "Browser-local values override these defaults, including optional independent width/depth stretch. The box is active only while the alignment tool is open. Locked resizing and rotation pivot around the box center. Reset clears saved transform values.",
+  "adjustments": "Saved edits apply only to this defaults revision. Older prototype settings are ignored so the screenshot becomes the starting alignment. The box is active only while the alignment tool is open. Reset restores the screenshot transform and locked proportions.",
+  "defaults_revision": "2026-10-19-screenshot-v1",
+  "lock_proportions": true,
   "default_source": "User-provided alignment screenshot, October 19, 2026"
 }
