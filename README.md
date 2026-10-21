@@ -17,8 +17,10 @@ to the fast preview, and the original file remains available through its link.
 ## 2D orthomosaic
 
 Choose **2D map** to view the October 11, 2026 Northmark orthomosaic from
-Mosaic Connector job d7c31bda-f4a5-4c01-9837-853724d08a8a. Its 2.3 MB WebP
-loads on demand, using the original UTM 17N geotransform. The September 24
+Mosaic Connector job d7c31bda-f4a5-4c01-9837-853724d08a8a. 088 loads a 1.5 MB crop at the original 10 cm/pixel resolution, with 60 metres
+of context around the route. The full-site 2.3 MB overview loads only when
+Site is pressed (or when viewing 082). Both use the original UTM 17N
+geotransform; the crop and overview share the same geographic registration. The September 24
 088 GPS path is projected into that image, independent of the splat alignment.
 Click the line to seek; playback updates the marker and played section. Drag
 to pan, scroll/pinch to zoom, and use Route/Site to frame. Fullscreen retains
