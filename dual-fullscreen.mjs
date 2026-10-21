@@ -1,6 +1,6 @@
 // Both live views stay in place, inside one fullscreen ancestor. No extra
 // renderer, video decoder, iframe navigation, or model load is needed to swap.
-export function setupDualFullscreen({root,modelPanel,videoPanel,onLayout=()=>{}}) {
+export function setupDualFullscreen({root,modelPanel,videoPanel,onLayout=()=>{},getModelName=()=>'splat'}) {
  const panels={model:modelPanel,video:videoPanel};
  const buttons={model:document.getElementById('modelFullscreen'),video:document.getElementById('videoFullscreen')};
  const expand='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg>';
@@ -12,7 +12,7 @@ export function setupDualFullscreen({root,modelPanel,videoPanel,onLayout=()=>{}}
   root.classList.toggle('views-fallback',fallback);
   if(primary)root.dataset.primary=primary;else delete root.dataset.primary;
   for(const kind of ['model','video']) {
-   const main=primary===kind,inset=!!primary&&!main,name=kind==='model'?'splat':'360 video';
+   const main=primary===kind,inset=!!primary&&!main,name=kind==='model'?getModelName():'360 video';
    panels[kind].classList.toggle('view-primary',main);
    panels[kind].classList.toggle('view-inset',inset);
    buttons[kind].setAttribute('aria-pressed',String(main));
@@ -60,5 +60,5 @@ export function setupDualFullscreen({root,modelPanel,videoPanel,onLayout=()=>{}}
  });
  document.getElementById('videoStage').addEventListener('dblclick',e=>{e.preventDefault();toggle('video')});
  update();
- return {toggle,exit,getState:()=>({primary,fallback,native:nativeElement()===root})};
+ return {toggle,exit,refresh:update,getState:()=>({primary,fallback,native:nativeElement()===root})};
 }

@@ -14,6 +14,17 @@ Switching quality preserves video time, look direction, and play/pause state.
 8K playback requires a compatible browser/device; unsupported playback falls back
 to the fast preview, and the original file remains available through its link.
 
+## 2D orthomosaic
+
+Choose **2D map** to view the October 11, 2026 Northmark orthomosaic from
+Mosaic Connector job d7c31bda-f4a5-4c01-9837-853724d08a8a. Its 2.3 MB WebP
+loads on demand, using the original UTM 17N geotransform. The September 24
+088 GPS path is projected into that image, independent of the splat alignment.
+Click the line to seek; playback updates the marker and played section. Drag
+to pan, scroll/pinch to zoom, and use Route/Site to frame. Fullscreen retains
+the linked video inset. Indoor 082 has no GPS line. The map and videos show
+different capture dates. No full GeoTIFF or map SDK is downloaded.
+
 ## Fullscreen views
 
 Use the fullscreen icon on either view. The other remains interactive in a
